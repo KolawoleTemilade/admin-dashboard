@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import HomeIcon from "@mui/icons-material/Home";
 import TableRowsIcon from "@mui/icons-material/TableRows";
@@ -14,7 +15,7 @@ export const sideBarData = [
   {
     icon: <HomeIcon />,
     title: "Home",
-    link: "/home",
+    link: "/",
   },
   {
     icon: <TableRowsIcon />,
@@ -34,12 +35,15 @@ export const sideBarData = [
 ];
 
 const SidesBar = () => {
+    const navigate = useNavigate();
   return (
-    <div className="w-60">
+    //  <div className="max-h-screen">
+    <div className=" h-[20vh] w-60">
       {sideBarData.map((side, index) => (
-        <div key={index} className="h-full bg-slate-700 text-white ">
+        <div key={index} className="bg-slate-700 text-white ">
           <ul>
-            <li className="flex gap-4 p-8">
+            <li className="flex gap-4 p-8" onClick={() => navigate(side.link)}>
+             
               {side.icon}
               <h3>{side.title}</h3>
             </li>
@@ -47,6 +51,7 @@ const SidesBar = () => {
         </div>
       ))}
     </div>
+    // </div>
   );
 };
 

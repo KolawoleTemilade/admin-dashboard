@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Dashboard = () => {
+const Tables = () => {
   return (
     <div>
+        hello world!
       
     </div>
   )
 }
 
-export default Dashboard
+export default Tables
