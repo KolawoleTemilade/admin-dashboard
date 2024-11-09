@@ -37,10 +37,10 @@ export const sideBarData = [
 const SidesBar = () => {
     const navigate = useNavigate();
   return (
-    //  <div className="max-h-screen">
-    <div className=" h-[20vh] w-60">
+     <div className="max-h-screen ">
+    <div className=" h-[100vh] w-60 bg-slate-700 text-white">
       {sideBarData.map((side, index) => (
-        <div key={index} className="bg-slate-700 text-white ">
+        <div key={index}>
           <ul>
             <li className="flex gap-4 p-8" onClick={() => navigate(side.link)}>
              
@@ -51,7 +51,7 @@ const SidesBar = () => {
         </div>
       ))}
     </div>
-    // </div>
+    </div>
   );
 };
 
