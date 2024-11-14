@@ -118,25 +118,50 @@ const Tables = () => {
           </thead>
           <tbody>
             {borderTable.map((btabs, i) => (
-              <tr key={i} className=" p-4">
+              <tr key={i} className=" p-4 border border-b-black">
                 <td className="p-4">
                   <div className="font-bold">{btabs.id} </div>
                 </td>
-                <td scope="row" className="text-start p-4 border border-x-black">
+                <td scope="row" className="text-start p-4 border border-b-black border-x-black">
                   <div>
                     {btabs.firstname}
                   </div>
                 </td>
-                <td scope="row" className="text-start p-4 border border-x-black">
+                <td scope="row" className="text-start p-4 border border-b-black border-x-black">
                   <div>
                     {btabs.middlename}
                   </div>
                 </td>
-                <td scope="row" className="text-start p-4">
+                <td scope="row" className="text-start p-4 border border-b-black border-x-black">
                   <div>
                     {btabs.lastname}
                   </div>
                 </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {/* want to repeat same table with nth-child highlight */}
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>firstname</th>
+              <th>lastname</th>
+              <th>username</th>
+            </tr>
+          </thead>
+          <tbody>
+            {borderTable.map((btabs, i) => (
+              <tr key={i}>
+                <td><div>{btabs.id}</div></td>
+                <td><div>{btabs.firstname}</div></td>
+                <td><div>{btabs.middlename}</div></td>
+                <td><div>{btabs.lastname}</div></td>
+                
+
               </tr>
             ))}
           </tbody>
