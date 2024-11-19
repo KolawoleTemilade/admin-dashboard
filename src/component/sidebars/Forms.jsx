@@ -28,12 +28,12 @@ const Forms = () => {
               className="border border-black p-3 rounded-md"
             />
           </div>
-          <div className="w-full">
+          <div className="w-full ">
             <label htmlFor="select" className="mb-4">
-              select
+              Select
             </label>
-            <select className="md:w-1/2 lg:w-full border border-black">
-              <option value=""></option>
+            <select className="md:w-1/2 lg:w-full border border-black p-3 rounded-md">
+              <option value="select an option">select an option</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
